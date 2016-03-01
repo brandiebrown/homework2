@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html ng-app="QuizProgram">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Quiz Program</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <h1>Quiz Program</h1>
+            <p>Quizzing program selects random students and random questions.</p>
+        </div>
+
+        <div class="container">
+            <div ng-controller="QuizProgramController as qpc">
+                <!--<button type="button" class="btn btn-lg btn-default" ng-show="qpc.show_next" ng-click="qpc.getNext()">Next Student</button><br/>-->
+                <p><span class="label label-default">student:</span> {{qpc.selected_student.name}} -
+                correct: {{qpc.selected_student.correct}} - incorrect: {{qpc.selected_student.incorrect}}</p>
+                <p><span class="label label-default">question:</span> {{qpc.selected_question.text}}</p>
+                <p><span class="label label-default">answer:</span> {{qpc.selected_question.answer}}</p>
+                <button type="button" class="btn btn-success" ng-click="qpc.doCorrect()">Correct</button>
+                <button type="button" class="btn btn-danger" ng-click="qpc.doIncorrect()">Incorrect</button>
+            </div>
+        </div>
+        <script src="angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="app2.js"></script>
+    </body>
+
+    </html>

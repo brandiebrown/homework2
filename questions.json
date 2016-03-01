@@ -1,0 +1,22 @@
+[
+    {
+        "text": "AngularJS uses what programming language?", 
+        "answer": "JavaScript"
+    },
+    {
+        "text": "The scope is the ______ between the template and controller", 
+        "answer": "glue"
+    },
+    {
+        "text": "Angular uses _______ and _________ in the template", 
+        "answer": "directives and expressions"
+    },
+    {
+        "text": "You bootstrap your angular application with the ngApp directive", 
+        "answer": "true"
+    },
+    {
+        "text": "AngularJS is fun", 
+        "answer": "Yes"
+    }
+]
