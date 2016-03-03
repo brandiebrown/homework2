@@ -16,14 +16,16 @@
 
     </head>
 
-    <body>
+    <body ng-controller="QuizProgramController as qpc">
         <div class="jumbotron">
             <h1>Quiz Program</h1>
+            
             <p>Quizzing program selects random students and random questions.</p>
+           <!-- <button ng-click="qpc.getNext()" class="btn btn-primary btn-lg"> Start</button>-->
         </div>
 
         <div class="container">
-            <div ng-controller="QuizProgramController as qpc">
+            <div>
                 <!--<button type="button" class="btn btn-lg btn-default" ng-show="qpc.show_next" ng-click="qpc.getNext()">Next Student</button><br/>-->
                 <p><span class="label label-default">student:</span> {{qpc.selected_student.name}} -
                 correct: {{qpc.selected_student.correct}} - incorrect: {{qpc.selected_student.incorrect}}</p>
@@ -33,9 +35,10 @@
                 <button type="button" class="btn btn-danger" ng-click="qpc.doIncorrect()">Incorrect</button>
             </div>
         </div>
-        <script src="angular.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="app2.js"></script>
+        <script src="angular.js"></script>
+       <script src="controller.js"></script>
+       
+       
     </body>
 
     </html>
